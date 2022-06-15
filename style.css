@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Poppins:wght@100;200;300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    /*Stilleri Sıfırlama işlemi */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+a,
+a:link,
+a:visited {
+    /*Stilleri Sıfırlama işlemi */
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+li {
+    /*Stilleri Sıfırlama işlemi */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+span,
+p {
+    /*Stilleri Sıfırlama işlemi */
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+}
+
+.container {
+    /* ustmenu boyutlandırılması sağlandı */
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* background-color: brown; */
+
+}
+
+.header {
+    /* görsel oturtuldu */
+    background-image: url('/image/slider.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.header-navbar {
+    display: grid;
+    padding: 40px 0;
+grid-template-columns:100px  auto;
+gap: 200px;
+align-items:center;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+   */
+}
+.header-logo h2{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border-bottom: 4px solid black;
+    border-radius: 35px;
+    padding-bottom: 15px;
+}
+ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+} 
+ul:first-child{
+    margin-left: 100px;
+}
+
+li {
+    margin-left: 27px;
+}
+
+
+a{
+    color: black;
+   font-weight: bold;
+   font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+#header-menu-icon{
+    position: absolute;
+     right: 50px;
+     font-size: 1.5rem;
+     top: 55px;
+     display: none;
+}
+.header-text{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first-letter{
+font-size: 6rem;
+font-family: 'Herr Von Muellerhoff', cursive;
+}
+.header-text>h1{
+    font-size: 5rem;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-weight: 100;
+    /* fonta incelik verir */
+    line-height: 0.4;
+    /* satırlar arası boşluk */
+    letter-spacing: 8px;
+    color:#816844;
+    text-shadow:  3px 2px 1px #000; ;
+    
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 1.2rem;
+    
+}
+.btn-coffee{
+    font-family: 'Poppins', sans-serif;
+
+    margin-top: 15px;
+    display: block;
+    background-color: #816844;
+    color: white;
+    padding:10px 15px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.8rem;
+    /* after taşıyordu taşmasın diye ekledık */
+
+}
+.btn-coffee::after{
+    position:absolute;
+    content: 'buy';
+   top: 100%;
+   left:0;
+  width: 100%;
+  height: 100%;
+  background-color: #6d5533;
+  /* buy yazısını ortalayabılmek ıcın flex kullandık */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  
+  /* Geçiş yumuşatıldı */
+}
+/* Afterı hover oldugunda uygulayacak */
+.btn-coffee:hover::after{
+    /* hover oldugunda tabı uste 0 olacak sekılde ayarlasın */
+    top: 0;
+
+}
+
+/* .about-container{
+    margin: 55px;
+} */
+
+
+
+
+.about-content{
+    
+    margin-bottom: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.about-title{
+    margin: 60px 0;
+}
+.about-title h2{
+    font-family: 'Poppins', sans-serif;
+
+  width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    color: #816844;
+    /* font-weight: 600; */
+}
+.about-title::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+background-color: #6d5533;
+margin: 0 auto;
+margin-top: 7px;
+display: block;
+
+}
+.about-content{
+    display: grid;
+    
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(400px, 1fr));
+    gap:50px;
+}
+.about-image{
+
+    
+}
+.about-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-text {    
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+.about-text h3{
+    letter-spacing: 0.5rem;
+    font-weight: 100;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #6d5533;
+    font-size: 2.5rem;
+    font-family: 'Herr Von Muellerhoff', cursive;
+
+}
+.about-text i{
+    font-size: 1.5rem;
+    color:#6d5533;
+    margin-bottom: 25px;
+}
+
+.about-text p{
+    color: #241c12;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* Portfolyo */
+
+
+.portfolyo{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+/* display: flex;
+flex-wrap: wrap; */
+/* Flex yapısı wrap olacak şekilde verıldı */
+}
+.portfolyo-item{
+    /* Her bir görsel sayfanın 100de 25ini kapladı bu sayede 100de 100ü için dort gorsel sığdırdı
+    overflow hidden ile taşma engellendı. */
+    /* width: 25%; */
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.portfolyo-item img{
+    /* imgye bulundugun alanın 100de 100unu kapla ve cover(obje alana tam otursun)dedik */
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: 0.5s;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    /* icon arka plan rengı duzeltıldı */
+    background-color: #4e3d25;
+    /* absolute yapıldıkı ıcon konumunu degıtırebılelım ana contaınerda relative yapıldı */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0.8;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.portfolyo-item:hover .overlay{
+    top:0;
+}
+.portfolyo-item:hover img{
+    transform: scale(1.1);
+    /* Görsel büyütüldü */
+}
+
+/* Contact Us */
+.contact-content{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    
+    /* display: flex;
+    justify-content: space-evenly; */
+    
+}
+.content-item{
+ 
+     display: flex;
+    align-items: center;
+    flex-basis: 33%;
+    margin-bottom: 100px;
+    flex-direction: column; 
+
+}
+.content-item i{
+    font-size: 25px;
+    color: #4e3d25;
+    margin-bottom: 30px;
+}
+.content-item p{
+    text-align: center;
+}
+/* footer */
+
+.footer{
+    background-color:#241c12;
+    padding: 3rem;
+    color: white;
+  
+
+    
+
+}
+.footer-about-title h2{
+    width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 2rem;
+      /* font-weight: 600; */
+  }
+.footer-about-title::after{
+    content: '';
+    width: 40px;
+    height: 3px;
+background-color: #ffffff;
+margin: 0 auto;
+margin-top: 7px;
+margin-bottom: 25px;
+display: block;
+
+}
+.footer-p{
+    text-align: center;
+    margin-bottom: 25px;
+    width: 40%;
+    font-family: 'Poppins', sans-serif;
+
+}
+.footer-content{
+    
+    display: flex;
+  
+    flex-direction: column;
+    align-items: center;
+
+ 
+}
+.footer-icon i{
+color: white;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+@media only screen and (max-width:800px) {
+    .header-menu ul{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background-color: #866b44;
+     position: absolute;
+     top: 100px;
+     left: 0px;
+     width: 100%;
+     overflow: hidden;
+     transition: 0.5s;
+     /* icona tıklandıgında menunun acılmasına geçiş verildi */
+    
+ 
+    }
+    .header-menu ul li{
+        margin-right:10px ;
+        margin-bottom: 5px;
+        margin-left: 10px; 
+        /* Ortaya hizalandı */
+    }
+    .header-menu ul li a{
+        color: white;
+    }
+    .header-menu #header-menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .contact-content{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .content-item{
+        margin: 20px 50px;
+       }
+       .content-item p{
+           width: 100%;
+           text-align: center;
+       }
+  
+}
+@media only screen and (max-width:1014px) {
+    /* ABOUT RESPONSİVE */
+
+
+     .portfolyo {
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+         /* her satıra 2şer resim sığdı */
+     }
+}
+@media only screen and (max-width:500px){
+  .portfolyo {grid-template-columns: 100%;
+}}
+@media only screen and (max-width:500px){
+    /* İphone Se'de iconlar aşağı kayıyordu */
+    /* .footer-icon i{
+margin-left: 20px; */
+
+}
+
+
